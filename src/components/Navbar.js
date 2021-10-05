@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src='/images/logo.png' alt='...' />
+            {/* <img src='/images/logo.png' alt='...' /> */}
             {/* <i class='fab fa-typo3' /> */}
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -69,37 +69,6 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-
-            {/* <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Partnership
-              </Link>
-            </li>
-
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Partnership
-              </Link>
-            </li>
-
-
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Collaborations
-              </Link>
-            </li> */}
 
             <li>
               <Link

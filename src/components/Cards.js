@@ -29,7 +29,7 @@ function Cards() {
           <h2 className='heading-two'>
             How can we help you?</h2>
           <ul className='cards__items'>
-            <p1>
+            <p>
               <li>
                 Getting rid of plastics from your business’ everyday practices can make a huge impact, and it’s
                 easy to do with a few small changes.
@@ -42,7 +42,7 @@ function Cards() {
               <li>
                 Our goal is to prevent plastic waste by improving the plastic packaging circularity journey.
               </li>
-            </p1>
+            </p>
             <CardItem
               src='images/card-img.jpg'
 
