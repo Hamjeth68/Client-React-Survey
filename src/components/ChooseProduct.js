@@ -8,7 +8,7 @@ import InfoIcon from '@mui/icons-material/Info';
 
 function ChooseProduct() {
     return (
-        <ImageList sx={{ width: 5000, height: 450 }}>
+        <ImageList sx={{ width: 500, height: 450 }}>
             <ImageListItem key="Subheader" cols={2}>
                 <ListSubheader component="div">December</ListSubheader>
             </ImageListItem>
