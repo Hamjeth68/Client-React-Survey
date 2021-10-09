@@ -13,6 +13,8 @@ import {
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
+import Step4 from "./Step4";
+import Step5 from "./Step5";
 
 // import styled from "styled-components";
 import MultiStepProgressBar from "./MultiStepProgressBar";
@@ -109,26 +111,6 @@ class MasterForm extends Component {
 
         };
 
-        // const obj = {
-        //     Paperboardboxes: 'Recyclable',
-        //     Corrugatedboxes: 'Recyclable',
-        //     Plastic: 'Recyclable',
-        //     Rigidboxes: 'Recyclable',
-        //     Chipboardpackaging: 'Recyclable',
-        //     Polybags: 'Recyclable',
-        //     Foiledsealbags: 'Recyclable',
-        //     Cotton: 'Recyclable',
-        //     Jute: 'Recyclable',
-        //     Envelopes: 'Recyclable',
-        //     Bubblemailers: 'Non recyclable',
-        //     Styrofoampolystyrene: 'Non recyclable',
-        //     Tissuepaper: 'Recyclable',
-        //     Kraftpaperpackingpaper: 'Recyclable',
-        //     MoldedPulpFiberPackaging: 'Recyclable',
-        //     Airbagspillowbags: 'Non recyclable'
-        // }
-
-
         // Bind the submission to handleChange()
         this.handleChange = this.handleChange.bind(this);
 
@@ -144,13 +126,6 @@ class MasterForm extends Component {
             [name]: value
         });
     }
-
-    // handleChange2(event) {
-    //     const { Paperboardboxes, value } = event.target;
-    //     this.setState({
-    //         [Paperboardboxes]: value
-    //     });
-    // }
 
     // Trigger an alert on form submission
     handleSubmit = event => {
@@ -171,7 +146,7 @@ class MasterForm extends Component {
         let currentStep = this.state.currentStep;
 
         // If the current step is 1 or 2, then add one on "next" button click
-        currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+        currentStep = currentStep >= 6 ? 7 : currentStep + 1;
         this.setState({
             currentStep: currentStep
         });
@@ -268,7 +243,13 @@ class MasterForm extends Component {
                             <Step3
                                 currentStep={this.state.currentStep}
                                 handleChange={this.handleChange}
-
+                            />
+                            <Step4
+                                currentStep={this.state.currentStep}
+                            // handleChange={this.handleChange}
+                            />
+                            <Step5
+                                currentStep={this.state.currentStep}
                             />
                         </CardBody>
                         <CardFooter>

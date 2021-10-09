@@ -60,7 +60,7 @@ const Step3 = props => {
                                     label="Select"
                                     value={quantity}
                                     onChange={handleChange}
-                                    helperText="Please select your currency"
+                                   
                                 >
                                     {quantities.map((option) => (
                                         <MenuItem key={option.value} value={option.value}>

@@ -64,22 +64,22 @@ const Step1 = props => {
 
                 <Label for="heading">Bubble mailers
                 </Label>
-
+                <br />
                 <Input type="checkbox" value={props.Bubblemailers} onChange={props.handleChange} />
 
                 <Label for="heading">Styrofoam (polystyrene)
                 </Label>
-
+                <br />
                 <Input type="checkbox" value={props.Styrofoampolystyrene} onChange={props.handleChange} />
 
                 <Label for="heading">Kraft paper (packing paper)
                 </Label>
-
+                <br />
                 <Input type="checkbox" value={props.Kraftpaperpackingpaper} onChange={props.handleChange} />
 
                 <Label for="heading">Tissue paper
                 </Label>
-
+                <br />
                 <Input type="checkbox" value={props.Tissuepaper} onChange={props.handleChange} />
 
                 {/* <Input
