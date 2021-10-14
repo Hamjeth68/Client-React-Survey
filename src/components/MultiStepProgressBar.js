@@ -20,12 +20,24 @@ const MultiStepProgressBar = props => {
         stepPercentage = 70;
     } else if (props.currentStep === 7) {
         stepPercentage = 80;
-    } else {
+    } else if (props.currentStep === 8) {
+        stepPercentage = 90;
+    }
+    else {
         stepPercentage = 0;
     }
 
     return (
         <ProgressBar percent={stepPercentage}>
+            <Step>
+                {({ accomplished, index }) => (
+                    <div
+                        className={`indexedStep ${accomplished ? "accomplished" : null}`}
+                    >
+                        {index + 1}
+                    </div>
+                )}
+            </Step>
             <Step>
                 {({ accomplished, index }) => (
                     <div

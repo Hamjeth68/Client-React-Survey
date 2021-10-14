@@ -15,6 +15,8 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Step5 from "./Step5";
+import Step6 from "./Step6";
+import Step7 from "./Step7";
 
 // import styled from "styled-components";
 import MultiStepProgressBar from "./MultiStepProgressBar";
@@ -181,7 +183,7 @@ class MasterForm extends Component {
     get nextButton() {
         let currentStep = this.state.currentStep;
         // If the current step is not 3, then render the "next" button
-        if (currentStep < 7) {
+        if (currentStep < 8) {
             return (
                 <Button color="primary float-right" onClick={this._next}>
                     Next
@@ -196,7 +198,7 @@ class MasterForm extends Component {
         let currentStep = this.state.currentStep;
 
         // If the current step is the last step, then render the "submit" button
-        if (currentStep > 6) {
+        if (currentStep > 7) {
             return <Button color="primary float-right">Submit</Button>;
         }
         // ...else render nothing
@@ -249,6 +251,12 @@ class MasterForm extends Component {
                             // handleChange={this.handleChange}
                             />
                             <Step5
+                                currentStep={this.state.currentStep}
+                            />
+                            <Step6
+                                currentStep={this.state.currentStep}
+                            />
+                            <Step7
                                 currentStep={this.state.currentStep}
                             />
                         </CardBody>
