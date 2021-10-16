@@ -1,25 +1,21 @@
 {
-  "name": "navbar-dropdown-v1",
+  "name": "sustainable-iq",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@mui/icons-material": "^5.0.1",
-    "@mui/material": "^5.0.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/material": "^5.0.4",
     "axios": "^0.23.0",
     "bootstrap": "^5.1.1",
     "material-ui": "^0.20.2",
-    "mdbreact": "^5.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "react-step-progress-bar": "^1.0.3",
     "reactstrap": "^8.10.0"
   },
@@ -43,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.2.0"
   }
 }

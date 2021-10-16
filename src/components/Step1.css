@@ -6,6 +6,8 @@ li {
   display: inline-block;
 }
 
+
+
 input[type="checkbox"][id^="cb"] {
   display: none;
 }

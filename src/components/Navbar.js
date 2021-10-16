@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import LoginButton from './LoginButton';
+// import LoginButton from './LoginButton';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -27,44 +27,44 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav class='navbar'>
+        <div class='navbar-container'>
+          <Link to='/' class='navbar-logo' onClick={closeMobileMenu}>
             {/* <img src='/images/logo.png' alt='...' /> */}
             {/* <i class='fab fa-typo3' /> */}
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <div class='menu-icon' onClick={handleClick}>
+            <i class={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+          <ul class={click ? 'nav-menu active' : 'nav-menu'}>
+            <li class='nav-item'>
+              <Link to='/' class='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li class='nav-item'>
               <Link
                 to='/services'
-                className='nav-links'
+                class='nav-links'
                 onClick={closeMobileMenu}
               >
                 About Us
               </Link>
             </li>
-            <li className='nav-item'>
+            <li class='nav-item'>
               <Link
                 to='/products'
-                className='nav-links'
+                class='nav-links'
                 onClick={closeMobileMenu}
               >
                 News
               </Link>
             </li>
 
-            <li className='nav-item'>
+            <li class='nav-item'>
               <Link
                 to='/sign-up'
-                className='nav-links'
+                class='nav-links'
                 onClick={closeMobileMenu}
               >
                 Access Tool
@@ -74,14 +74,14 @@ function Navbar() {
             <li>
               <Link
                 to='/sign-up'
-                className='nav-links-mobile'
+                class='nav-links-mobile'
                 onClick={closeMobileMenu}
               >
                 Sign Up
               </Link>
             </li>
           </ul>
-          <LoginButton />
+          {/* <LoginButton /> */}
           {/* <Button buttonSize='btn--medium' buttonStyle='btn-primary'>Access Tool</Button>
           {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
           {/* <Link className='nav-links'>

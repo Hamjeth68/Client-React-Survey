@@ -17,6 +17,7 @@ import Step4 from "./Step4";
 import Step5 from "./Step5";
 import Step6 from "./Step6";
 import Step7 from "./Step7";
+import './MasterForm.css'
 
 // import styled from "styled-components";
 import MultiStepProgressBar from "./MultiStepProgressBar";
@@ -31,85 +32,160 @@ class MasterForm extends Component {
             Paperboardboxes: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard'
             },
             Corrugatedboxes: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Plastic: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Rigidboxes: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Chipboardpackaging: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Polybags: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Foiledsealbags: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Cotton: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Jute: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Envelopes: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Bubblemailers: {
                 type: 'Non recyclable',
                 percent: 'Not a sustainable package',
-                answer: 'no'
+                answer: 'no',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Styrofoampolystyrene: {
                 type: 'Non recyclable',
                 percent: 'Not a sustainable package',
-                answer: 'no'
+                answer: 'no',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Tissuepaper: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Kraftpaperpackingpaper: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             MoldedPulpFiberPackaging: {
                 type: 'Recyclable',
                 percent: '100%',
-                answer: 'yes'
+                answer: 'yes',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
             Airbagspillowbags: {
                 type: 'Non recyclable',
                 percent: 'Not a sustainable package',
-                answer: 'no'
+                answer: 'no',
+                average: 'Average Packing',
+                EuropeanStandard: 'EuropeanStandard',
+                KG: '',
+                MG: '',
+                G: ''
             },
-            average: 'Average Packing',
-            EuropeanStandard: 'EuropeanStandard',
 
         };
 
@@ -122,24 +198,33 @@ class MasterForm extends Component {
     }
 
     // Use the submitted data to set the state
-    handleChange(event) {
-        const { name, value } = event.target;
+    handleChange = input => e => {
         this.setState({
-            [name]: value
+            [input]: e.target.value
         });
     }
 
     // Trigger an alert on form submission
     handleSubmit = event => {
         event.preventDefault();
-        const { firstName, secondName, position, companyName, number, email } = this.state;
+        const { Paperboardboxes, Corrugatedboxes, Plastic, Rigidboxes, Chipboardpackaging, Polybags, Foiledsealbags, Cotton, Jute, Envelopes, Bubblemailers, Styrofoampolystyrene, Tissuepaper, Kraftpaperpackingpaper, MoldedPulpFiberPackaging, Airbagspillowbags } = this.state;
         alert(`Your registration detail: \n 
-    firstName: ${firstName} \n 
-    secondName: ${secondName} \n
-    position: ${position} \n
-    companyName: ${companyName} \n
-    number: ${number} \n
-    email: ${email}`);
+        Paperboardboxes: ${Paperboardboxes} \n 
+        Corrugatedboxes: ${Corrugatedboxes} \n
+        Plastic: ${Plastic} \n
+        Rigidboxes: ${Rigidboxes} \n
+        Chipboardpackaging: ${Chipboardpackaging} \n
+        Polybags: ${Polybags} \n
+        Foiledsealbags: ${Foiledsealbags} \n
+        Cotton: ${Cotton} \n
+        Jute: ${Jute}\n
+        Envelopes: ${Envelopes} \n
+        Bubblemailers: ${Bubblemailers}\n
+        Styrofoampolystyrene: ${Styrofoampolystyrene}\n
+        Tissuepaper: ${Tissuepaper}\n
+        Kraftpaperpackingpaper: ${Kraftpaperpackingpaper}\n
+        MoldedPulpFiberPackaging: ${MoldedPulpFiberPackaging}\n
+        Airbagspillowbags: ${Airbagspillowbags} \n`);
     };
 
     // Test current step with ternary
@@ -183,7 +268,7 @@ class MasterForm extends Component {
     get nextButton() {
         let currentStep = this.state.currentStep;
         // If the current step is not 3, then render the "next" button
-        if (currentStep < 8) {
+        if (currentStep < 7) {
             return (
                 <Button color="primary float-right" onClick={this._next}>
                     Next
@@ -198,7 +283,7 @@ class MasterForm extends Component {
         let currentStep = this.state.currentStep;
 
         // If the current step is the last step, then render the "submit" button
-        if (currentStep > 7) {
+        if (currentStep > 6) {
             return <Button color="primary float-right">Submit</Button>;
         }
         // ...else render nothing
@@ -245,22 +330,29 @@ class MasterForm extends Component {
                             <Step3
                                 currentStep={this.state.currentStep}
                                 handleChange={this.handleChange}
+                                KG={this.state.KG}
+                                MG={this.state.MG}
+                                G={this.state.G}
                             />
                             <Step4
                                 currentStep={this.state.currentStep}
-                            // handleChange={this.handleChange}
+                                handleChange={this.handleChange}
                             />
                             <Step5
                                 currentStep={this.state.currentStep}
+                                handleChange={this.handleChange}
+
                             />
                             <Step6
                                 currentStep={this.state.currentStep}
+                                handleChange={this.handleChange}
                             />
                             <Step7
                                 currentStep={this.state.currentStep}
+                                handleChange={this.handleChange}
                             />
                         </CardBody>
-                        <CardFooter>
+                        <CardFooter className="footer">
                             {this.previousButton}
                             {this.nextButton}
                             {this.submitButton}
